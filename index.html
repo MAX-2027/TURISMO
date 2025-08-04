@@ -436,7 +436,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(148,209,128,1.0)',
-                interactive: true,
+                interactive: false,
             }
         }
         map.createPane('pane_COLEGIOMILITAR_6');
@@ -444,7 +444,7 @@
         map.getPane('pane_COLEGIOMILITAR_6').style['mix-blend-mode'] = 'normal';
         var layer_COLEGIOMILITAR_6 = new L.geoJson(json_COLEGIOMILITAR_6, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_COLEGIOMILITAR_6',
             layerName: 'layer_COLEGIOMILITAR_6',
             pane: 'pane_COLEGIOMILITAR_6',
@@ -501,8 +501,7 @@
         function pop_OXIDACION_8(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">id</th>\
-                        <td>' + (feature.properties['id'] !== null ? autolinker.link(String(feature.properties['id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(String(feature.properties['id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -549,10 +548,6 @@
                     <tr>\
                         <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(String(feature.properties['begin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
-                    <tr>\
-                        <th scope="row">end</th>\
-                        <td>' + (feature.properties['end'] !== null ? autolinker.link(String(feature.properties['end']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -591,8 +586,7 @@
                         <td colspan="2">' + (feature.properties['PROPIEDAD'] !== null ? autolinker.link(String(feature.properties['PROPIEDAD']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">PRECIOXM2</th>\
-                        <td>' + (feature.properties['PRECIOXM2'] !== null ? autolinker.link(String(feature.properties['PRECIOXM2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['PRECIOXM2'] !== null ? autolinker.link(String(feature.properties['PRECIOXM2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
